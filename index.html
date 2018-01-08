@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			.modal-lbl{
+				text-align: right;
+			    width: 140px;
+			    display: inline-block;
+			}
+			.modal-body {
+			    max-height: 450px;
+			    overflow-y: scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="page-header">
+						<h1>Countries</h1>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3">
+					<label>Seach by <span id="searchbyText">All</span></label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="searchBox" data-searchBy="all" placeholder="Search...">
+						<span class="input-group-btn">
+							<button class="btn btn-default js-search" type="button">Go!</button>
+						</span>
+					</div>
+					<br/>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Filters
+						<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="javascript:void(0);" search-type="all">All</a></li>
+							<li><a href="javascript:void(0);" search-type="name">Name</a></li>
+							<li><a href="javascript:void(0);" search-type="capital">Capital</a></li>
+							<li><a href="javascript:void(0);" search-type="language">Language</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-9" id="contentArea">
+				<div class="text-right">
+					Showing <span id="filteredCount">0</span> of <span id="totalCount">0</span>
+				</div>	
+				<ul class="list-group"></ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" tabindex="-1" role="dialog" id="countryModal">
+	  	<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" style="display:inline-block;">Modal title</h4>
+		        <img src="" style="width:30px;" />
+		      </div>
+		      <div class="modal-body">
+		        
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- jQuery -->
+	<script
+	src="https://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	crossorigin="anonymous"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
